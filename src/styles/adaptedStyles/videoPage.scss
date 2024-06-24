@@ -1,5 +1,7 @@
 .bewly-design.videoPage {
-  .user-card-m-exp .layout {
+  .user-card-m-exp .layout,
+  .up-detail .up-detail-top .up-name.is_vip:hover .mask,
+  .up-detail .up-detail-top .up-name.small-vip:hover .mask {
     display: none;
   }
 
@@ -56,7 +58,7 @@
 
     .note-list .list-note-operation,
     .note-pc .note-container .note-header .note-operation,
-    .note-up .up-desc-container .desc-top .attention-btn-container {
+    .note-up .up-desc-container .desc-top .attention-btn-container:not(.is-attention) {
       background-color: var(--bew-theme-color);
     }
 
@@ -66,7 +68,7 @@
 
     .note-list .list-note-operation:hover,
     .note-pc .note-container .note-header .note-operation:hover,
-    .user-card-m-exp .user-info-wrapper .info .btn-box .like:hover,
+    .user-card-m-exp .user-info-wrapper .info .btn-box .like:not(.liked):hover,
     .coin-operated-m-exp .coin-bottom .bi-btn:hover,
     .video-share-popover
       .video-share-dropdown
@@ -76,8 +78,10 @@
       .bar-right
       .copy-link:hover,
     .note-up .up-desc-container .desc-top .attention-btn-container:hover,
+    .note-up .up-desc-container .desc-top .attention-btn-container.is-attention:hover,
     .report-dialog .vui_dialog--footer .report-dialog-footer .button-wrap .comfirm-report:hover,
-    .collection-m-exp .bottom .btn:hover {
+    .collection-m-exp .bottom .btn:hover,
+    .upinfo-btn-panel .following-charge-btn:hover {
       background-color: var(--bew-theme-color-80);
     }
 
@@ -111,6 +115,7 @@
     .ql-snow.ql-toolbar button:hover,
     .ql-snow .ql-toolbar button:hover,
     .up-name.is_vip,
+    .up-name.small-vip,
     .up-detail .up-detail-top .up-name[style*="color: rgb(251, 114, 153)"],
     .up-detail .up-detail-top .up-name[style*="color:#FB7299;"] {
       color: var(--bew-theme-color) !important;
@@ -118,6 +123,19 @@
 
     .upinfo-btn-panel .not-follow-charge-btn:hover {
       color: var(--bew-theme-color-80);
+    }
+
+    .up-name.is_vip:hover,
+    .up-name.small-vip:hover,
+    .up-detail .up-detail-top .up-name:hover,
+    .up-detail .up-detail-top .up-name[style*="color: rgb(251, 114, 153)"]:hover,
+    .up-detail .up-detail-top .up-name[style*="color:#FB7299;"]:hover {
+      color: var(--bew-theme-color-80) !important;
+    }
+
+    .note-pc .note-container .note-header .note-operation.detail,
+    .note-up .up-desc-container .desc-top .attention-btn-container:hover {
+      color: white;
     }
 
     .coin-operated-m-exp .mc-box:hover,
@@ -131,7 +149,7 @@
     }
 
     .upinfo-btn-panel .not-follow-charge-btn:hover,
-    .user-card-m-exp .user-info-wrapper .info .btn-box .like:hover,
+    .user-card-m-exp .user-info-wrapper .info .btn-box .like:not(.liked):hover,
     .coin-operated-m-exp .coin-bottom .bi-btn:hover {
       border-color: var(--bew-theme-color-80);
     }
@@ -254,7 +272,8 @@
       .bpx-player-dm-btn-send.bui-disabled
       .bui-button-blue
       .modal-wrapper
-      .modal-header-close:hover {
+      .modal-header-close:hover,
+    .note-up .up-desc-container .desc-top .attention-btn-container.is-attention {
       background-color: var(--bew-fill-3);
     }
 
